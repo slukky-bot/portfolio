@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// api key
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 export default function MultipleWeather() {
@@ -20,7 +21,7 @@ export default function MultipleWeather() {
       const res = await axios.get(
         `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=3`
       );
-      
+
       setData(res.data);
     } catch (err) {
       setError(err.response?.data?.error?.message || "Something went wrong");

@@ -24,7 +24,8 @@ const NewsList = () => {
         const res = await axios.get(NEWS_API_URL, { params });
         setArticles(res.data.articles);
         setTotalResults(res.data.totalResults);
-      } catch {
+      } catch (err) {
+        console.log("News fetch garda error aayo0", err);
         setArticles([]);
         setTotalResults(0);
       } finally {

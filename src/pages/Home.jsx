@@ -1,12 +1,17 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import WeatherApp from "../components/Weather";
-import MultipleWeather from "../components/MultipleWeather";
 
-import NewsList from "../components/News";
+import TypingTest from "@/components/TypingTest";
+import Portfolio4 from "@/components/Hero";
+import NewsList from "@/components/News";
+
 const Home = () => {
-  return <div>Home page</div>;
+  return (
+    <div className="mb-10">
+      <Portfolio4 />
+      <NewsList />
+      <TypingTest />
+    </div>
+  );
 };
 
 export default Home;
